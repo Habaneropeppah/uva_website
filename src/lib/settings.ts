@@ -44,6 +44,12 @@ export const SETTINGS = {
     type: "textarea",
     default: "Jordan River Parkway RC Field\nSaratoga Springs, Utah\n( 40.363372, -111.901728 )",
   },
+  fieldNotice: {
+    label: "Field notice (banner on the Weather page)",
+    hint: "Leave empty for no banner. Optional lines above the message: \"type: closed\" shows a red Field closed banner and makes the page say CLOSED instead of GO/NO-GO; \"until: 2026-11-15\" hides the banner after that date. Lines starting with # are ignored.",
+    type: "textarea",
+    default: "",
+  },
   contactEmail: {
     label: "Contact email (shown in footer)",
     type: "text",

@@ -19,6 +19,7 @@ Docker Compose, served over HTTPS through a Cloudflare Tunnel.
 | `/gallery`    | Photo albums with a lightbox viewer                                    |
 | `/resources`  | Bylaws, rules, forms (downloads)                                       |
 | `/membership` | Membership options, each with a PayPal button                          |
+| `/weather`    | Flight weather for the field: go/no-go, runway, hourly and 7-day outlook. Installable as a phone app |
 
 Officers log in at **`/admin`** to manage all of the above, plus the member roster
 (search, renew +1 year, CSV import/export) and other admin accounts.

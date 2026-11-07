@@ -16,6 +16,7 @@ export const site = {
   nav: [
     { href: "/about", label: "About" },
     { href: "/field", label: "Field" },
+    { href: "/weather", label: "Weather" },
     { href: "/blog", label: "News" },
     { href: "/events", label: "Events" },
     { href: "/gallery", label: "Gallery" },
