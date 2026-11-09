@@ -406,9 +406,9 @@ export function windTrend(now: Hour, hours: Hour[], idx: number): Trend | null {
     t = { icon: "📉", title: "Wind easing:", detail: `${r0(nowWind)} → ${r0(low.wind)} mph by ${hourLong(low.hour)}` };
   else t = { icon: "➡️", title: "Wind speed steady", detail: `around ${r0(nowWind)} mph for the next ${FIELD.trendHours} hours` };
   // Runway change: first upcoming hour where a different runway end is favored (ignoring calm hours)
-  if (nowWind > FIELD.calmMph && ok(now.dir)) {
+  if (nowWind >= FIELD.calmMph && ok(now.dir)) {
     const cur = runwayChoice(nowWind, now.dir).best.num;
-    const sw = next.find((h) => h.wind! > FIELD.calmMph && ok(h.dir) && runwayChoice(h.wind!, h.dir).best.num !== cur);
+    const sw = next.find((h) => h.wind! >= FIELD.calmMph && ok(h.dir) && runwayChoice(h.wind!, h.dir).best.num !== cur);
     if (sw) t.shift = `wind shifts to ${cardinal(sw.dir)}: runway ${runwayChoice(sw.wind!, sw.dir!).best.num} likely by ${hourLong(sw.hour)}`;
   }
   return t;
